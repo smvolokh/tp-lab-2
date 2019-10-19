@@ -61,7 +61,7 @@ void msort(T* arr, int left, int right)
 	T temp;
 	if (left < right)
 		if (right - left == 1) {
-			if (compare(arr[right],arr[left])) {
+			if (!(compare(arr[left], arr[right])) {
 				temp = arr[left];
 				arr[left] = arr[right];
 				arr[right] = temp;
