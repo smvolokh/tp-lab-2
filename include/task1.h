@@ -7,16 +7,16 @@ bool cmp(T a, T b) {
 }
 
 template <>
-bool cmp(char* a, char* b) {
+bool cmp<char*>(char* a, char* b) {
 	return strlen(a) < strlen(b);
 }
 template <typename T>
-void merge(T* arr, size_t left, size_t right) {
-	size_t first = left, middle = (left + right) / 2, second = middle + 1;
+void merge(T* arr, int left, int right) {
+	int first = left, middle = (left + right) / 2, second = middle + 1;
 	T * result = new T[right];
-	for (size_t j = 0; j < right; j++)
+	for (int j = 0; j < right; j++)
 		result[j] = 0;
-	size_t i = 0; // index for result
+	int i = 0; // index for result
 	while (first <= middle && second <= right) {
 		if (cmp(arr[first], arr[second])) {
 			result[i] = arr[first];
@@ -47,7 +47,7 @@ void merge(T* arr, size_t left, size_t right) {
 
 
 template <typename T>
-void msort(T * arr, size_t left, size_t right) {
+void msort(T * arr, int left, int right) {
 	if (left < right)
 		if (right - left == 1) {
 			if (!(cmp(arr[left], arr[right]))) {
@@ -57,7 +57,7 @@ void msort(T * arr, size_t left, size_t right) {
 			}
 		}
 		else {
-			size_t middle = (left + right) / 2;
+			int middle = (left + right) / 2;
 			msort(arr, left, middle);
 			msort(arr, middle + 1, right);
 			merge(arr, left, right);
