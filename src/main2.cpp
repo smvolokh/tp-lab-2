@@ -1,5 +1,6 @@
+#include <iostream>
 #include "task2.h"
-
+using namespace std;
 template <typename T>
 
 T gen() {
