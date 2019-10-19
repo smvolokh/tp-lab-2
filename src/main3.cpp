@@ -1,19 +1,22 @@
-#include <iostream>
 #include "task3.h"
-using namespace std;
-template <typename T>
-T change(T a) {
-	return 0;
+
+template < typename T >
+T change(T x)
+{
+	return x+15;
 }
+
+
 int main() {
-	const int N = 5;
-	double array[N] = { 13.2, 11.41, -4.65, 13.0, 2.13 };
-	for (int i = 0; i < N; i++)
-		cout << array[i] << " ";
+	const int n = 5;
+	int mas[n];
+	for (int i = 0; i < n; i++) {
+		mas[i] = rand() % 100 + 1;
+		cout << mas[i] << " ";
+	}
 	cout << endl;
-	map<double, N>(array, change);
-	for (int i = 0; i < N; i++)
-		cout << array[i] << " ";
-	cout << endl;
-	return 0;
+	map<int, n>(mas, change);
+	for (int i = 0; i < n; i++)
+		cout << mas[i] << " ";
+	
 }

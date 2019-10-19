@@ -1,24 +1,34 @@
-#include <iostream>
 #include "task1.h"
-using namespace std;
 
-int main() {
+int main()
+{
+	srand(time(NULL));
 	const int n = 5;
-	int arr1[n] = { -4, 5, 11, 3, -3 };
+	int mas[n];
 	for (int i = 0; i < n; i++)
-		cout << arr1[i] << " ";
-	cout << endl;
-	msort(arr1, 0, n - 1);
-	for (int i = 0; i < n; i++)
-		cout << arr1[i] << " ";
-	cout << endl;
+	{
+		mas[i] = rand() % 100 + 1;
+	}
 
-	char* arr2[n] = { (char*)"kraken", (char*)"abc", (char*)".s23", (char*)"tp-lab2", (char*)"gg" };
+	msort(mas, 0, n-1);
+	cout << "\n";
 	for (int i = 0; i < n; i++)
-		cout << arr2[i] << " ";
-	cout << endl;
-	msort(arr2, 0, n - 1);
+	{
+		cout << mas[i] << " ";
+	}
+
+	cout << "\n";
+
+	char* array[n] = {(char*) "a", (char*)"abcd", (char*)"low", (char*)"gl", (char*)"enqweee" };
+	msort(array, 0, n - 1);
+
 	for (int i = 0; i < n; i++)
-		cout << arr2[i] << " ";
-	return 0;
+		cout << array[i] << " ";
+	cout << "\n";
+	double dd[n];
+	for (int i = 0; i < n; i++)
+		dd[i] = (double)(rand() % 100 + 1) / (rand() % 20 + 1);
+	msort(dd, 0, n - 1);
+	for (int i = 0; i < n; i++)
+		cout << dd[i] << " ";
 }
