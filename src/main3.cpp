@@ -2,7 +2,7 @@
 #include "task3.h"
 using namespace std;
 template <typename T>
-T change() {
+T change(T a) {
 	return 0;
 }
 int main() {
@@ -15,4 +15,5 @@ int main() {
 	for (int i = 0; i < N; i++)
 		cout << array[i] << " ";
 	cout << endl;
+	return 0;
 }

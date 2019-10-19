@@ -64,3 +64,8 @@ void msort(T * arr, int left, int right) {
 		}
 
 }
+
+template <typename T>
+void msort(T* arr, int n) {
+	msort(arr, 0, n - 1);
+}

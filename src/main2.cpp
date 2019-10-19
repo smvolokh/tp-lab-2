@@ -13,4 +13,5 @@ int main() {
 	mas = createArr<int, N>(gen);
 	for (int i = 0; i < N; i++)
 		cout << mas[i] << " ";
+	return 0;
 }
